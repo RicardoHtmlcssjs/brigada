@@ -1,0 +1,164 @@
+*,*:after,*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+*{
+	box-sizing: border-box;
+}
+/*formulario del login*/
+.cont_from_login{
+	background-color: #fff;
+}
+.container{
+	max-width: 1500px;
+}
+/* cuerpo´padre*/
+.cuerpo_padre{
+	/* background-color: rgb(235, 235, 235); */
+	width: 100%; 
+	display: flex; 
+	flex-direction: row;
+}
+.dps_none{
+	display: none;
+}
+/* estilo del boton de subir expediente en pdf */
+.btn_subir_exp:hover{
+	box-shadow: 1px 1px 5px black;
+}
+/* -----------------estilos del modal agregar en pdf el expediente -----------------------*/
+.titulo_mod_exp {
+	text-align: center;
+  }
+  
+  .form_mod_exp {
+	margin: 20px auto;
+	width: 500px;
+	border: 1px solid #ccc;
+	padding: 20px;
+  }
+  
+  input[type="file"] {
+	display: block;
+  }
+  
+  .lb_mod_exp {
+	display: block;
+	cursor: pointer;
+	border: 1px dashed #ccc;
+	padding: 20px;
+	text-align: center;
+  }
+  
+  .lb_mod_exp:hover {
+	background-color: #f5f5f5;
+  }
+  
+  .area-arrastrar {
+	font-style: italic;
+  }
+  
+  .btn_mod_exp {
+	margin-top: 10px;
+	width: 100%;
+	padding: 10px;
+	background-color: #000;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+  }
+  
+  .btn_mod_exp:hover {
+	background-color: #333;
+  }
+/* --------------------------------------------------------------------------------------- */
+/* formulario de perfil del usuario */
+.cont_from_login{
+	width: 50%;
+	max-width: 400px;
+}
+/* sidebar*/
+.sidebar{
+	min-width: 200px;
+}
+/* Mostrar el elemento en computadoras (ancho de pantalla mayor a 768px) */
+@media (min-width: 766px) {
+	.img_form_log {
+	  display: block;
+	}
+	
+  }
+
+  /* Ocultar el elemento en dispositivos móviles (ancho de pantalla menor a 768px) */
+@media (max-width: 767px) {
+	.img_form_log {
+	  display: none;
+	}
+	.fondo_cuerpo{
+		background-image: url('../images/fondo_foto.jpg');
+		background-repeat: no-repeat; 
+		background-size: cover; 
+		background-position: center;
+		margin-top: -30%;
+	}
+	#cuerpo{
+		
+	}
+	#cont_form_log_padre{
+		margin-top: 45%;
+	}
+  }
+ @media (max-width: 580px){
+ 	#text_header{
+ 		font-size: 15px;
+ 	}
+ }
+ @media (max-width: 480px){
+ 	.cuerpo{
+ 		margin-top: -40%;
+ 	}
+ 	/*.cuerpo_quitar{
+ 		margin-top: 40%;
+ 	}*/
+ 	.cont_form_log_padre{
+ 		margin-top: 65%;
+ 	}
+ 	/*.cont_form_log_padre_quitar{
+ 		margin-top: -65%;
+ 	}*/
+ }
+ @media (max-width: 380px){
+ 	#text_header{
+ 		font-size: 10px;
+ 	}
+ }
+/* SELECT MULTIPLE DE RESPONDER ENCUESTA COMO EMPRESA */
+#multi_option{
+	max-width: 100%;
+	width: 350px;
+}
+.vscomp-toggle-button{
+	padding: 10px 30px 10px 10px;
+	border-radius: 5px;
+}
+/*opciones del navbar para poner color*/
+#opnb_cerrar_session:hover{
+	background-color: #aea93b;
+}
+#opc_admin2:hover{
+	background-color: #aea93b;
+}
+#opc_admin:hover{
+	background-color: #aea93b;
+}
+#opnb_cerrar_session:hover{
+	background-color: #aea93b;
+}
+#opn_des_pdf:hover{
+	background-color: #aea93b;
+}
+
+
+

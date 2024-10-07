@@ -1,0 +1,628 @@
+ <!-- Ventana modal de entregar expediente -->
+        <div>
+            <!-- modal 1  registrarse uno mismo-->
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="titulo1" aria-hidden="true">
+                <div class="modal-dialog modal1" id="mod1">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <h5 class="modal-title" id="titulo1">Solicitar expediente</h5> -->
+                        <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                    </div>
+                    <div class="modal-body">
+                            <h2 class="text-center" id='id_tit_mod1'>Registrarme</h2>
+                            <!-- mb-3  margin-bottom de 3 unidades -->
+                            <form action="">
+                                <div class="mb-1" style="display: flex; justify-content: space-evenly;">
+                                    <!-- <div class="cont_h1_soli" id="cont_h1_soli"> -->
+                                        <label for="solicitante" class="form-label">Rif:</label>
+                                        <select name="rif" id="rif">
+                                            <option value="V">V</option>
+                                            <option value="E">E</option>
+                                            <option value="J">J</option>
+                                            <!-- <option value="J">J</option> -->
+                                        </select>
+                                        <input type="number" class="form-control" style="width: 70%;" id="cedula" name="cedula" placeholder="" autofocus>
+                                        <button id="bs_ci_em" name="bs_ci_em" type="button" class="btn btn-success btn-xs">Buscar</button>
+                                    <!-- </div> -->
+                                </div>
+                                <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                    <label for="nombre" class="form-label">Nombre y Apellido: </label>
+                                    <input type="text" name="nombre" id="nombre" class="form-control" disabled="true">
+                                </div>
+                                <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                    <label for="correo" class="form-label">Correo: </label>
+                                    <input type="text" name="correo" id="correo" class="form-control" value="@gmail.com" disabled="true">
+                                </div>
+                                <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                    <label for="telefono" class="form-label">Telefono: </label>
+                                    <input type="number" name="telefono" id="telefono" class="form-control" disabled="true">
+                                </div>
+                                <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                    <label for="sexo_reg" class="form-label">Sexo: </label>
+                                    <select name="sexo_reg" id="sexo_reg" class="form-control" disabled="true">
+                                        <option value="M">M</option>
+                                        <option value="F">F</option>
+                                    </select>
+                                </div>
+                                <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                    <label for="estado" class="form-label">Estado: </label>
+                                    <select name="estado" id="estado" class="form-control" disabled="true">
+                                    </select>
+                                    <label for="estado" class="form-label">Municipio: </label>
+                                    <select name="municipio" id="municipio" class="form-control" disabled="true">
+                                    </select>
+                                    <label for="estado" class="form-label">Parroquia: </label>
+                                    <select name="parroquia" id="parroquia" class="form-control" disabled="true">
+                                    </select>
+                                </div>
+                                <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                    <label for="direccion" class="form-label">Dirección: </label>
+                                    <textarea name="direccion" id="direccion" cols="30" rows="2" class="form-control" disabled="true">
+
+                                    </textarea>
+                                </div>
+                                <div class="mb-1 text-center">
+                                    <i>Redes sociales</i>
+                                </div>
+                                <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                    <label for="tiktok_reg" class="form-label">TikTok:</label>
+                                    <input type="text" name="tiktok_reg" id="tiktok_reg" class="form-control"  disabled="true" placeholder="(No es obligatorio)">
+                                </div>
+                                <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                    <label for="facebook_reg" class="form-label">Facebook:</label>
+                                    <input type="text" name="facebook_reg" id="facebook_reg" class="form-control"  disabled="true" placeholder="(No es obligatorio)">
+                                </div>
+                                <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                    <label for="instagram_reg" class="form-label">Instagram:</label>
+                                    <input type="text" name="instagram_reg" id="instagram_reg" class="form-control"  disabled="true" placeholder="(No es obligatorio)">
+                                </div>
+                                <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                    <label for="niv_academico" class="form-label">Nivel academico: </label>
+                                    <select name="niv_academico" id="niv_academico" class="form-control" disabled="true">
+                                        <option value="primaria">Primaria</option>
+                                        <option value="bachiller">Bachiller</option>
+                                        <option value="tsu">TSU</option>
+                                        <option value="lincenciatura">Lincenciatura</option>
+                                        <option value="ingenieria">Ingenieria</option>
+                                    </select>
+                                </div>
+                                <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                    <label for="hab_des" class="form-label">Habilidades y Destrezas:</label>
+                                    <!-- <input type="text" name="hab_des" id="hab_des" class="form-control"  disabled="true" placeholder="(No es obligatorio)"> -->
+                                    <select name="hab_des" id="hab_des" class="form-control" disabled="true">
+                                        <option value="" selected>(Opcional)</option>
+                                        <option value="1">Canto</option>
+                                        <option value="2">Baile</option>
+                                        <option value="3">Actuacion</option>
+                                        <option value="4">Artes Plasticas</option>
+                                    </select>
+                                </div>
+                                <hr>
+                                <div class="text-center">
+                                    <i>Datos para el inicio de sesion</i>
+                                </div>
+                                <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                    <label for="usuario" class="form-label">Usuario:</label>
+                                    <input type="text" name="usuario" id="usuario" class="form-control" disabled="true">
+                                </div>
+                                <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                    <label for="contrasena" class="form-label">Contraseña:</label>
+                                    <input type="password" name="contrasena" id="contrasena" class="form-control" disabled="true">
+                                </div>
+                                <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                    <label for="pregunta" class="form-label">Pregunta secreta:</label>
+                                    <input type="text" name="pregunta" id="pregunta" class="form-control" disabled="true">
+                                </div>
+                                <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                    <label for="respuesta" class="form-label">Respuesta secreta:</label>
+                                    <input type="text" name="respuesta" id="respuesta" class="form-control" disabled="true">
+                                </div>
+                                <div class="modal-footer justify-content-center">
+                                    <button type="button" class="btn btn-success"  id="registrase" name="registrase" onclick="registrarse()">Registrarse</button>
+                                </div>
+                                <div class="mb-2" id="error_soli_exp1"></div>
+                            </form>
+                    </div>
+                    
+                </div>
+                </div>
+            </div>
+            <!-- fin modal 1 -->
+            <!-- modal 2 -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="titulo2" aria-hidden="true">
+                <div class="modal-dialog modal1">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <h5 class="modal-title" id="titulo1">Solicitar expediente</h5> -->
+                        <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                    </div>
+                    <div class="modal-body" id="modal2">
+                    </div>
+                </div>
+                </div>
+            </div>
+            <!-- fin modal 2 -->
+            <!-- modal 3 modificar usuario login -->
+            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="titulo1" aria-hidden="true">
+                <div class="modal-dialog modal1">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <h5 class="modal-title" id="titulo1">Solicitar expediente</h5> -->
+                        <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                    </div>
+                    <div class="modal-body">
+                            <h2 class="text-center" id='id_tit_mod1'>Actualizar datos del   usuario</h2>
+                            <!-- mb-3  margin-bottom de 3 unidades -->
+                            <form action="" id='modal_form_mod_usu_log'>
+                                <div class="mb-1" id="cont_ci_usu_edi" name="cont_ci_usu_edi" style="display: none;">
+                                    <label for="cedula_usu">Cedula:</label>
+                                    <div class="d-flex flex-row">
+                                        <input class="form-control" type="number" id="cedula" name="cedula">
+                                    </div>
+                                </div>
+                                <div class='text-center' id='buscando_ci' name='buscando_ci'></div>
+                                    <div class="" id="cont_h1_soli">
+                                        <label for="cor_act_adm" class="form-label">Correo:</label>
+                                        <input type="text"class="form-control" id="cor_act_adm" name="nom_act_adm" value=''>
+                                        <input type="hidden" id="id_usu" name="id_usu">
+                                    </div>
+                                    <div class="" id="cont_h1_soli">
+                                        <label for="act_act_adm" class="form-label">Activo:</label>
+                                        <input type="text" class="form-control" id="act_act" name="act_act" value='' disabled="true">
+                                        <select class="form-control mt-2" id="act_act_adm" name="act_act_adm" onclick='sel_act()'>
+                                        </select>
+                                    </div> 
+
+                                    <div class="" id="cont_h1_soli">
+                                        <div style='display: none;'>
+                                            <label for="adm_fec" class="form-label">Fecha de registro:</label>
+                                            <input type="text" class="form-control" id="adm_fec" name="adm_fec" value='' disabled="true">
+                                        </div>
+                                        <div style='display: none;'>
+                                            <input type="date" class="form-control" id="fecha_r" name="fecha_r">
+                                            <button type="button" class="btn btn-success btn-xs" id="btn_agregar_fe" name="btn_agregar_fe">Agregar fecha</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="" id="cont_h1_soli">
+                                        <label for="adm_act_adm" class="form-label">Administrador:</label>
+                                        <input type="text" class="form-control" id="adm_act" name="adm_act" value='' disabled="true">
+                                        <select class="form-control mt-3" id="adm_act_adm" name="adm_act_adm" onclick='sel_adm()'>
+                                        </select>
+                                    </div>
+                                    <div class='cont_h2_entre' id='cont_h2_entre'></div>
+                                <div class="modal-footer justify-content-center">
+                                    <button type="button" class="btn btn-success"  id="btn_acttualizar_usu" name="btn_acttualizar_usu">Actualizar</button>
+                                    <button type="button" class="btn btn-success"  id="btn_acttualizar_usu2" name="btn_acttualizar_usu2">Actualizar</button>
+                                </div>
+                                <div class="mb-2" id="error_soli_exp3"></div>
+                            </form>
+                            <!--  -->
+                        <!-- </div>    -->
+                         <!--  -->
+                    </div>
+                    
+                </div>
+                </div>
+            </div>
+            <!-- fin modal 3 modificar usuario login -->
+        </div>
+        <!-- modal 4 alerta de expedientes con mas 3 dias de retraso -->
+        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="titulo2" aria-hidden="true">
+            <div class="modal-dialog modal1">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="titulo1">Solicitar expediente</h5> -->
+                    <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                    <div style="display: flex; align-items: center;">
+                                               
+                        <h4 id="cant_expe" name="cant_expe"><img src="view/images/icono_danger.png" width="35px" alt="" srcset="" class="mr-1 mb-1"> </h4> 
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- fin modal agregar -->
+        <!-- modal 5 de subir expediente en img  -->
+        <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="titulo2" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="titulo_mod_exp">Subir imagen del expediente</h1>
+                    <div class="principal">
+                        <form action="" id="form_subir">
+                            <div class="form-1-2">
+                                <label for="Archivo a subir"></label>
+                                <input type="file" name="archivo" id="archivo" required>
+                            </div>
+                            <div class="barra">
+                                <div class="barra_azul" id="barra_estado">
+                                    <span id="barra_span"></span>
+                                </div>
+                            </div>
+                            <div class="acciones">
+                                <button type="submit" class="btn btn-success">Guardar</button>
+                                <!-- <input type="submit" class="btn" value="enviar"> -->
+                                <!-- <input type="button" class="cancel" id="cancel" value="cancelar"> -->
+                            </div>
+                            <input type="hidden" id="cedula_exp" name="cedula_exp" value="">
+                            <div class="mb-2" id="error_soli_exp_file"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- modal 6 de ver cantidad de img de expedientes por cada personal -->
+        <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="titulo2" aria-hidden="true">
+            <div class="modal-dialog modal1">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="titulo1">Solicitar expediente</h5> -->
+                    <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="text-center">Expedientes</h1>
+                    <div id="resultado_exp_todos"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- modal 7 editar datos de mi perfil y mostrar los datos -->
+        <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="titulo1" aria-hidden="true">
+            <div class="modal-dialog modal1" id="mod1">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="titulo1">Solicitar expediente</h5> -->
+                    <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                        <h2 class="text-center" id='id_tit_mod1'>Mi perfil</h2>
+                        <!-- mb-3  margin-bottom de 3 unidades -->
+                        <form action="">
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="nombre_edi" class="form-label">Nombre y Apellido: </label>
+                                <input type="text" name="nombre_edi" id="nombre_edi" class="form-control">
+                            </div>
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="correo_edi" class="form-label">Correo: </label>
+                                <input type="text" name="correo_edi" id="correo_edi" class="form-control" value="@gmail.com">
+                            </div>
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="telefono_edi" class="form-label">Telefono: </label>
+                                <input type="number" name="telefono_edi" id="telefono_edi" class="form-control">
+                            </div>
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="sexo_edi" class="form-label">Sexo: </label>
+                                <select name="sexo_edi" id="sexo_edi" class="form-control">
+                                </select>
+                            </div>
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="estado_edi" class="form-label">Estado: </label>
+                                <input type="text" name="estado_edi" id="estado_edi" class="form-control" readonly="true">
+                            </div>
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="tiktok_edi" class="form-label">TikTok: </label>
+                                <input type="text" name="tiktok_edi" id="tiktok_edi" class="form-control" >
+                            </div>
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="facebook_edi" class="form-label">Facebook: </label>
+                                <input type="text" name="facebook_edi" id="facebook_edi" class="form-control" >
+                            </div>
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="estado_edi" class="form-label">Instagram: </label>
+                                <input type="text" name="instagram_edi" id="instagram_edi" class="form-control" >
+                            </div>
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="direccion_edi" class="form-label">Dirección: </label>
+                                <textarea name="direccion_edi" id="direccion_edi" cols="30" rows="2" class="form-control">
+
+                                </textarea>
+                            </div>
+                            <hr>
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="usuario_edi" class="form-label">Usuario:</label>
+                                <input type="text" name="usuario_edi" id="usuario_edi" class="form-control" disabled="true">
+                            </div>
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="contrasena_edi" class="form-label">Contraseña:</label>
+                                <input type="password" name="contrasena_edi" id="contrasena_edi" class="form-control">
+                            </div>
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="pregunta_edi" class="form-label">Pregunta secreta:</label>
+                                <input type="text" name="pregunta_edi" id="pregunta_edi" class="form-control">
+                            </div>
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="respuesta_edi" class="form-label">Respuesta secreta:</label>
+                                <input type="text" name="respuesta_edi" id="respuesta_edi" class="form-control">
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <button type="button" class="btn btn-success"  id="actualizar_dat_usu" name="actualizar_dat_usu" >Actualizar</button>
+                            </div>
+                            <div class="mb-2" id="error_soli_exp7"></div>
+                        </form>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+        <!-- modal 8 olvidaste tu contraseña -->
+        <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="titulo1" aria-hidden="true">
+            <div class="modal-dialog modal1" id="mod1">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="titulo1">Solicitar expediente</h5> -->
+                    <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                        <h2 class="text-center" id='id_tit_mod1'>Mi perfil</h2>
+                        <!-- mb-3  margin-bottom de 3 unidades -->
+                        <form action="">
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="pregunta" class="form-label">Ingresa tu usuario:</label>
+                                <input type="text" name="usu_rec_con" id="usu_rec_con" class="form-control">
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <button type="button" class="btn btn-success"  id="rec_pre_sec" name="rec_pre_sec" >Pregunta secreta</button>
+                                <button type="button" class="btn btn-success"  id="rec_env_cor" name="rec_env_cor" >Envio de correo</button>
+                            </div>
+                            <div class="mb-2" id="error_soli_exp8"></div>
+                        </form>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+        <!-- modal 9 recuperar contraseña por pregunta secreta -->
+        <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="titulo1" aria-hidden="true">
+            <div class="modal-dialog modal1" id="mod1">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="titulo1">Solicitar expediente</h5> -->
+                    <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                        <h2 class="text-center" id='id_tit_mod1'>Pregunta secreta</h2>
+                        <!-- mb-3  margin-bottom de 3 unidades -->
+                        <form action="">
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="pregunta" class="form-label">Pregunta secreta:</label>
+                                <input type="text" name="pregunta_rec_res" id="pregunta_rec_res" class="form-control" readonly>
+                            </div>
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="respuesta_edi" class="form-label">Respuesta secreta:</label>
+                                <input type="text" name="respuesta_sec_rec" id="respuesta_sec_rec" class="form-control">
+                                <input type="hidden" name="respuesta_veri" id="respuesta_veri" class="form-control">
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <button type="button" class="btn btn-success"  id="rec_env_cor" name="rec_env_cor" onclick="recuperar_contra_respu()">Recuperar contraseña</button>
+                            </div>
+                            <div class="mb-2" id="error_soli_exp9"></div>
+                        </form>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+        <!-- modal 10 cambiar contraseña cualquier forma  -->
+        <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="titulo1" aria-hidden="true">
+            <div class="modal-dialog modal1" id="mod1">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="titulo1">Solicitar expediente</h5> -->
+                    <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                        <h2 class="text-center" id='id_tit_mod1'>Pregunta secreta</h2>
+                        <!-- mb-3  margin-bottom de 3 unidades -->
+                        <form action="">
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="respuesta_edi" class="form-label">Nueva contraseña:</label>
+                                <input type="text" name="contra_nueva" id="contra_nueva" class="form-control">
+                                <input type="hidden" name="respuesta_veri_f" id="respuesta_veri_f" class="form-control">
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <button type="button" class="btn btn-success"  id="rec_env_cor" name="rec_env_cor" onclick="camb_contra_ini()">Cambiar contraseña</button>
+                            </div>
+                            <div class="mb-2" id="error_soli_exp10"></div>
+                        </form>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+        <!-- modal 11 de subir expediente en img  -->
+        <div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="titulo2" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="titulo_mod_exp">Subir imagen del expediente</h1>
+                    <div class="principal">
+                        <form action="" id="archi" name="archi">
+                            <div class="form-1-2">
+                                <label for="Archivo a subir"></label>
+                                <input type="file" name="archivo" id="archivo" required>
+                            </div>
+                            <div class="barra">
+                                <div class="barra_azul" id="barra_estado">
+                                    <span id="barra_span"></span>
+                                </div>
+                            </div>
+                            <div class="acciones">
+                                <button type="submit" class="btn btn-success">Guardar</button>
+                                <!-- <input type="submit" class="btn" value="enviar"> -->
+                                <!-- <input type="button" class="cancel" id="cancel" value="cancelar"> -->
+                            </div>
+                            <input type="hidden" id="cedula_exp" name="cedula_exp" value="">
+                            <div class="mb-2" id="error_soli_exp_file"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- modal 12 grafico 1 empresas por nacionalidad  -->
+        <div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="titulo2" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="titulo_mod_exp">Grafico por Tipo</h1>
+                    <div class="principal">
+                        <canvas id="myChart" width="300" height="150"></canvas>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- modal 13 grafico 2 empresas por estado  -->
+        <div class="modal fade" id="exampleModal13" tabindex="-1" aria-labelledby="titulo2" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="titulo_mod_exp">Grafico por Estados</h1>
+                    <div class="principal">
+                        <div id="cargando1" name="cargando1" class="text-center"></div>
+                        <!-- <p id="cargando1" class="text-center"></p> -->
+                        <canvas id="myChart2" width="300" height="150"></canvas>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- modal 13.1 grafico por estado en una fecha en espesifica -->
+        <div class="modal fade" id="exampleModal17" tabindex="-1" aria-labelledby="titulo2" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="titulo_mod_exp">Grafico por Estados</h1>
+                    <div class="principal">
+                        <div id="cargando1" name="cargando4" class="text-center"></div>
+                        <!-- <p id="cargando1" class="text-center"></p> -->
+                        <canvas id="myChart4" width="300" height="150"></canvas>
+                        <form action="">
+                            <div class="my-1" style="display: flex; ">
+                                <label for="desde_estado" class="form-label">Desde:</label>
+                                <input type="date" name="desde_estado" id="desde_estado" class="form-control"><br>
+                                
+                            </div>
+                            <div class="my-1" style="display: flex; ">
+                                <label for="hasta_estado" class="form-label">Hasta:</label>
+                                <input type="date" name="hasta_estado" id="hasta_estado" class="form-control">    
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-success"  id="bus_esta_emp" name="bus_esta_emp" onclick="buscar_est_grafico()">Buscar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- modal 14 grafico 3 empresas por sexo  -->
+        <div class="modal fade" id="exampleModal14" tabindex="-1" aria-labelledby="titulo2" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="titulo_mod_exp">Grafico por sexo general</h1>
+                    <div class="principal">
+                        <div id="cargando2" name="cargando2" class="text-center"></div>
+                        <!-- <p id="cargando1" class="text-center"></p> -->
+                        <canvas id="myChart3" width="300" height="150"></canvas>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- modal 15 descargar excel de empresas por estado -->
+        <div class="modal fade" id="exampleModal15" tabindex="-1" aria-labelledby="titulo2" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="titulo_mod_exp">Descargar data de brigada por estado</h1>
+                    <div class="my-1" style="display: flex; ">
+                        <!-- <p id="cargando1" class="text-center"></p> -->
+                        <label for="solicitante" class="form-label">Estado:</label>
+                            <select class="form-control" name="estado_data_d" id="estado_data_d">
+                                
+                            </select>
+                    </div>
+                    <button type="button" class="btn btn-success"  id="bus_esta_emp" name="bus_esta_emp" onclick="descargar_data1_est()">Buscar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- modal 16 recuerda responder la encuesta -->
+        <div class="modal fade" id="exampleModal16" tabindex="-1" aria-labelledby="titulo2" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="titulo_mod_exp">Recuerda responder la encuesta.</h1>
+                    
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- modal 18 grafico 4 respuestas por de la encuesta 3ra pregunta como empresa  -->
+        <div class="modal fade" id="exampleModal18" tabindex="-1" aria-labelledby="titulo2" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="titulo_mod_exp">Grafico de Programas Ambientales por Parroquia</h1>
+                    <div class="principal">
+                        <canvas id="myChart6" width="300" height="150"></canvas>
+                        <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                    <label for="estado" class="form-label">Estado: </label>
+                                    <select name="estado_p" id="estado_p" class="form-control">
+                                    </select>
+                                    
+                                    
+                        </div>
+                        <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                            <label for="municipio_p" class="form-label">Municipio: </label>
+                                    <select name="municipio_p" id="municipio_p" class="form-control" disabled="true">
+                                    </select>
+                        </div>
+                        <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                            <label for="estado" class="form-label">Parroquia: </label>
+                                    <select name="parroquia_p" id="parroquia_p" class="form-control" disabled="true">
+                                    </select>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-success"  id="ver_grafico_p" name="ver_grafico_p" onclick="" disabled="true">Ver Grafico</button>
+                            </div>
+                        <div id="cargando2" name="cargando2" class="text-center"></div>
+                        <!-- <i id="cargando5" class="text-center">Cargando...</i> -->
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>

@@ -1,0 +1,15 @@
+----------------------------------
+columnas en la tabla dempresa
+- pregunta1   int   1
+- pregunta2   int   1
+- pregunta3   int   1
+- pregunta4   int   1
+- pregunta_lista   int   1
+- tiktok charactervaring  
+- instagram charactervaring 
+- facebook charactervaring
+- grado_intruccion_fk    integer  2
+- habilidades_destrezas_fk    integer  2
+- nivel_estudio_fk   ineger   2 
+------------------------------------------
+ 
