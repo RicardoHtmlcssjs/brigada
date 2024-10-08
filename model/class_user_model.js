@@ -321,7 +321,7 @@ class Usuarios{
 				// alert(result);
 				let r = JSON.parse(result);
 				$.each(r, function(index, element){
-					let res1 = "Sencibilación casa a casa";
+					let res1 = "Sensibilización casa a casa";
 					let res2 = "Cine ambiental Comunitario";
 					let res3 = "Saneamiento ambiental y embellecimiento";
 					let res4 = "Recuperación de espacios culturales y/o deportivos";
@@ -531,7 +531,7 @@ class Usuarios{
 			],
 			ordering: true,
 			language: {
-				lengthMenu: "Mostrar _MENU_ registros por pagina",
+				lengthMenu: "Mostrar _MENU_ registros por página",
 				zeroRecords: "Ningun usuario encontrado",
 				info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
 				infoEmpty: "Ningun usuario encontrado",
@@ -565,6 +565,7 @@ class Usuarios{
 						
 						$("#exampleModal8").modal("hide");
 						$("#exampleModal9").modal("show");
+						$("#usuario_id").val(usuario_rec);
 					// 	$("#pregunta_rec_res").val(result);
 						$("#respuesta_sec_rec").val("");
 					// $("#respuesta_veri").val("");
@@ -589,6 +590,23 @@ class Usuarios{
 			},
 			success: function(result){
 				alert(result);
+			},
+			error: function(error){
+				console.log(error);
+			}
+		});
+	}
+	// ingresar contraseña nueva por pregunta
+	cambiar_con_nue_pre(nv_contra){
+		$.ajax({
+			url: "model/ajax/cambiar_con_nue_pre_ajax.php",
+			type: "POST",
+			data: {
+				nv_contra
+			},
+			success: function(result){
+				$("#exampleModal20").modal("hide");
+				var notification = alertify.notify('Contraseña cambiada exitosamente', 'success', 5, function(){  console.log('dismissed'); });
 			},
 			error: function(error){
 				console.log(error);
@@ -927,7 +945,14 @@ class Usuarios{
 				respuesta_ingre, respuesta_correcta
 			},
 			success: function(result){
-				alert(result);
+				if(result == 1){
+					$("#error_soli_exp9").html("");
+					$("#exampleModal9").modal("hide");
+					$("#exampleModal20").modal("show");
+					// $("#usuario_cam_pre_con").val(usuario);
+				}else{
+					$("#error_soli_exp9").html((accion.mensaje_alerta("danger", "Respuesta incorrecta", "view/images/icono_danger.png")));
+				}
 			},
 			error: function(error){
 				console.log(error);
@@ -1094,7 +1119,7 @@ class Usuarios{
 			],
 			ordering: false,
 			language: {
-				lengthMenu: "Mostrar _MENU_ registros por pagina",
+				lengthMenu: "Mostrar _MENU_ registros por página",
 				zeroRecords: "Ningun usuario encontrado",
 				info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
 				infoEmpty: "Ningun usuario encontrado",
@@ -1208,7 +1233,7 @@ class Usuarios{
 			],
 			ordering: false,
 			language: {
-				lengthMenu: "Mostrar _MENU_ registros por pagina",
+				lengthMenu: "Mostrar _MENU_ registros por página",
 				zeroRecords: "Ningun usuario encontrado",
 				info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
 				infoEmpty: "Ningun usuario encontrado",
@@ -1680,7 +1705,7 @@ class Usuarios{
 			],
 			ordering: true,
 			language: {
-				lengthMenu: "Mostrar _MENU_ registros por pagina",
+				lengthMenu: "Mostrar _MENU_ registros por página",
 				zeroRecords: "Ningun usuario encontrado",
 				info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
 				infoEmpty: "Ningun usuario encontrado",
@@ -1859,7 +1884,7 @@ class Usuarios{
 			],
 			ordering: false,
 			language: {
-				lengthMenu: "Mostrar _MENU_ registros por pagina",
+				lengthMenu: "Mostrar _MENU_ registros por página",
 				zeroRecords: "Ningun usuario encontrado",
 				info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
 				infoEmpty: "Ningun usuario encontrado",
@@ -2008,7 +2033,7 @@ class Usuarios{
 			],
 			ordering: true,
 			language: {
-				lengthMenu: "Mostrar _MENU_ registros por pagina",
+				lengthMenu: "Mostrar _MENU_ registros por página",
 				zeroRecords: "Ningun usuario encontrado",
 				info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
 				infoEmpty: "Ningun usuario encontrado",
@@ -2229,7 +2254,7 @@ class Usuarios{
 			],
 			ordering: false,
 			language: {
-				lengthMenu: "Mostrar _MENU_ registros por pagina",
+				lengthMenu: "Mostrar _MENU_ registros por página",
 				zeroRecords: "Ningun usuario encontrado",
 				info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
 				infoEmpty: "Ningun usuario encontrado",

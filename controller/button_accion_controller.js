@@ -179,7 +179,7 @@ $("#rec_env_cor").on("click", function(){
 function recuperar_contra_respu(){
 	let respuesta_ingre = $("#respuesta_sec_rec").val();
 	let respuesta_correcta = $("#respuesta_veri").val();
-	$("#error_soli_exp9").html("");
+	// $("#error_soli_exp9").html("");
 	usuario.verificar_contra(respuesta_ingre, respuesta_correcta);
 	// if(respuesta_ingre == respuesta_correcta){
 	// 	$("#exampleModal9").modal("hide");
@@ -189,6 +189,11 @@ function recuperar_contra_respu(){
 	// 	$("#error_soli_exp9").html((accion.mensaje_alerta("danger", "La respuesta es incorrecta", "view/images/icono_danger.png")));
 	// }
 }
+// ingresar nueva contraseña
+$("#guardar_con_pre").on("click", function(){
+	let nv_contra = $("#nv_contra").val();
+	usuario.cambiar_con_nue_pre(nv_contra);
+});
 // ingresar contraseña a cambiar
 function camb_contra_ini(){
 	let respuesta_buena = $("#respuesta_veri_f").val();

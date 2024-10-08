@@ -2,10 +2,10 @@ function tabla_personal(){
 	let tab_perso = "<div class='mt-2'>";
         // tab_perso += "<div class='col-sm-12 col-md-12 col-lg-12 col-xl-12 px-0 cont_col_tab1' style='padding: 0px;'>";
             tab_perso += "<div id='cont_2_tbl' class='mb-2'>";
-            tab_perso += "<button class='btn btn-success mb-2' id='grafico_empresas1' name='grafico_empresas1' onclick='mostar_grafico()'><i class='fa-solid fas fa-file-upload'></i> Grafico por Tipo</button>";
-            tab_perso += "<button class='btn btn-success ml-2 mb-2' id='grafico_empresas2' name='grafico_empresas2' onclick='mostar_grafico2_por_estado()'><i class='fa-solid fas fa-file-upload'></i> Grafico por Estado</button>";
-            tab_perso += "<button class='btn btn-success ml-2 mb-2' id='grafico_empresas21' name='grafico_empresas21' onclick='mostar_grafico2_1_por_estado()'><i class='fa-solid fas fa-file-upload'></i> Grafico Estado por fecha</button>";
-            tab_perso += "<button class='btn btn-success ml-2 mb-2' id='grafico_empresas3' name='grafico_empresas3' onclick='mostar_grafico3_por_sexo()'><i class='fa-solid fas fa-file-upload'></i> Grafico por sexo</button>";
+            tab_perso += "<button class='btn btn-success mb-2' id='grafico_empresas1' name='grafico_empresas1' onclick='mostar_grafico()'><i class='fa-solid fas fa-file-upload'></i> Gráfico por Tipo</button>";
+            tab_perso += "<button class='btn btn-success ml-2 mb-2' id='grafico_empresas2' name='grafico_empresas2' onclick='mostar_grafico2_por_estado()'><i class='fa-solid fas fa-file-upload'></i> Gráfico por Estado</button>";
+            tab_perso += "<button class='btn btn-success ml-2 mb-2' id='grafico_empresas21' name='grafico_empresas21' onclick='mostar_grafico2_1_por_estado()'><i class='fa-solid fas fa-file-upload'></i> Gráfico Estado por fecha</button>";
+            tab_perso += "<button class='btn btn-success ml-2 mb-2' id='grafico_empresas3' name='grafico_empresas3' onclick='mostar_grafico3_por_sexo()'><i class='fa-solid fas fa-file-upload'></i> Gráfico por sexo</button>";
             tab_perso += "<button class='btn btn-success ml-2 mb-2' id='grafico_empresas_parro' name='grafico_empresas_parro' onclick='mostar_grafico_parro()'><i class='fa-solid fas fa-file-upload'></i>Programas Ambientales</button>";
             tab_perso += "</div>";
             tab_perso += "<div>";
@@ -13,15 +13,15 @@ function tabla_personal(){
             tab_perso += "<table class='table' id='datatable_empresas'>";
                 tab_perso += "<thead class='thead_tab1'";
                     tab_perso += "<tr>";
-                        tab_perso += "<th class='text-center tit_c_tab1'>Cedula</th>";
-                        tab_perso += "<th class='text-center tit_c_tab1'>Razon social</th>";
+                        tab_perso += "<th class='text-center tit_c_tab1'>Cédula</th>";
+                        tab_perso += "<th class='text-center tit_c_tab1'>Razón social</th>";
                         tab_perso += "<th class='text-center tit_c_tab1'>Estado - Municipio - Parroquia</th>";
                         tab_perso += "<th class='text-center tit_c_tab1'>Correo</th>";
-                        tab_perso +="<th class='text-center tit_c_tab1'>Telefono</th>";
+                        tab_perso +="<th class='text-center tit_c_tab1'>Teléfono</th>";
                         tab_perso += "<th class='text-center tit_c_tab1'>TikTok</th>";
                         tab_perso +="<th class='text-center tit_c_tab1'>Facebook</th>";
                         tab_perso += "<th class='text-center tit_c_tab1'>Instagram</th>";
-                        tab_perso +="<th class='text-center tit_c_tab1'>Nivel academico</th>";
+                        tab_perso +="<th class='text-center tit_c_tab1'>Nivel académico</th>";
                         tab_perso +="<th class='text-center tit_c_tab1'>Habilidades o Destrezas</th>";
                     tab_perso += "</tr>";
                 tab_perso += "</thead>";
@@ -43,7 +43,7 @@ function formulario_preguntas_listas_ver(){
         <div class="col-md-6 class="py-2 px-2" style="background-color: white; border-radius:1rem;">
         <form>
         <div class="mb-3 text-center">
-            <h1>¿Quieres construir un mejor Pais?</h1>
+            <h1>¿Quieres construir un mejor País?</h1>
         </div>
         <div class="mb-3">
             <label for="pregunta1" class="form-label">¿Estás activo(a) en alguna estructura comunitaria donde resides?</label>
@@ -78,7 +78,7 @@ function formulario_preguntas(){
         <div class="col-md-6 class="py-2 px-2" style="background-color: white; border-radius:1rem;">
         <form>
         <div class="mb-3 text-center">
-            <h1>¿Quieres construir un mejor Pais?</h1>
+            <h1>¿Quieres construir un mejor País?</h1>
         </div>
         <div class="mb-3">
             <label for="pregunta1" class="form-label" id="lpregunta1">¿Estás activo(a) en alguna estructura comunitaria donde resides?</label>
@@ -99,7 +99,7 @@ function formulario_preguntas(){
         <div class="mb-3">
             <label for="pregunta3" class="form-label" id="lpregunta3">¿Cuál de nuestros principales programas se adecuan a las necesidades ambientales de la comunidad donde resides?</label>
             <select id="multi_option" multiple name="native-select" placeholder="Native Select" data-search="false" data-silent-initial-value-set="false">
-                <option value="1">Sencibilización casa a casa</option>
+                <option value="1">Sensibilización casa a casa</option>
                 <option value="2">Cine ambiental Comunitario</option>
                 <option value="3">Saneamiento ambiental y embellecimiento</option>
                 <option value="4">Recuperación de espacios culturales y/o deportivos</option>
@@ -107,7 +107,7 @@ function formulario_preguntas(){
             </select>
         </div>
         <div class="mb-2" id="">
-            <label for="pregunta4" class="form-label">¿Tienes algún proyecto o propuesta en el 'area ambiental que podamos desarrollar en tú comunidad?</label>
+            <label for="pregunta4" class="form-label">¿Tienes algún proyecto o propuesta en el área ambiental que podamos desarrollar en tu comunidad?</label>
             <select class="form-control" id="pregunta4" onchange="fun_preg_1(4)">
                 <option selected></option>
                 <option value="1">Sí</option>

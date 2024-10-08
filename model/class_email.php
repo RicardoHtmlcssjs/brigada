@@ -3,7 +3,7 @@
       use PHPMailer\PHPMailer\SMTP;
       use PHPMailer\PHPMailer\Exception;
 class Email{
-  public function enviar_email($usuario_olvi, $correo, $nue_contra){
+  public function enviar_email($nombre, $correo, $usuario_rec){
 
       //Load Composer's autoloader
       // require 'vendor/autoload.php';
@@ -47,7 +47,7 @@ class Email{
                   </div>
                   <div width='200px' style='background: #fff; color: #000; border: 1px solid #000;'>
                     <h1><i>Brigada Contra el Cámbio Climatico</i></h1>
-                    <h3>$usuario_olvi tu contraseña nueva es: $nue_contra</h3>
+                    <h3>$nombre tu contraseña nueva es: $usuario_rec</h3>
                   </div>
                   <div></div>
                 </div>

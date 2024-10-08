@@ -307,6 +307,16 @@
 			$json = json_encode($array);
 			return $json;
 		}
+		// cambiar contraseña si es correcta la respuesta de recuperacion
+		public function cambiar_con_nue_pre($nv_contra){
+				parent::conecta();
+				$db = $this->conn;
+				session_start();
+				$login = $_SESSION["usuario_cam_contra_pre"];
+				$db->execute("UPDATE dempresa SET clave = '".md5($nv_contra)."' WHERE login = '".$login."'");
+				
+			return 1;
+		}
 		// verificar si existe el usuario y enviar correo de recuperacion de contraseña
 		public function recuperar_contra_usu_correo($usuario_rec){
 			$conexion = new Conexion();
@@ -323,6 +333,8 @@
 			}elseif($login == 0){
 				$res = 0;
 			}else{
+				$login = $_SESSION["usuario_cam_contra_pre"];
+				$db->execute("UPDATE dempresa SET clave = '".md5($usuario_rec)."' WHERE login = '".$usuario_rec."'");
 				include("class_email.php");
 				$ema = new Email();
 				return $ema->enviar_email($nombre, $correo, $usuario_rec);
@@ -697,7 +709,7 @@
 				$res2 = "No";
 			}
 			if($res3 == "1"){
-				$res3 = "Sencibilación casa a casa";
+				$res3 = "Sensibilización casa a casa";
 			}elseif($res3 == "2"){
 				$res3 = "Cine ambiental Comunitario";
 			}elseif($res3 == "3"){
@@ -713,7 +725,7 @@
 				$res4 = "No";
 			}
 			if($res3_1 == "1"){
-				$respuesta3_1 = "Sencibilación casa a casa";
+				$respuesta3_1 = "Sensibilización casa a casa";
 			}
 			if($res3_2 == "1"){
 				$respuesta3_2 = "Cine ambiental Comunitario";

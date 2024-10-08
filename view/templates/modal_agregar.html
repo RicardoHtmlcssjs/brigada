@@ -34,8 +34,8 @@
                                     <input type="text" name="correo" id="correo" class="form-control" value="@gmail.com" disabled="true">
                                 </div>
                                 <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
-                                    <label for="telefono" class="form-label">Telefono: </label>
-                                    <input type="number" name="telefono" id="telefono" class="form-control" disabled="true">
+                                    <label for="telefono" class="form-label">Teléfono: </label>
+                                    <input type="number" name="telefono" id="telefono" class="form-control" disabled="true" maxlength="11">
                                 </div>
                                 <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
                                     <label for="sexo_reg" class="form-label">Sexo: </label>
@@ -77,13 +77,13 @@
                                     <input type="text" name="instagram_reg" id="instagram_reg" class="form-control"  disabled="true" placeholder="(No es obligatorio)">
                                 </div>
                                 <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
-                                    <label for="niv_academico" class="form-label">Nivel academico: </label>
+                                    <label for="niv_academico" class="form-label">Nivel académico: </label>
                                     <select name="niv_academico" id="niv_academico" class="form-control" disabled="true">
                                         <option value="primaria">Primaria</option>
                                         <option value="bachiller">Bachiller</option>
                                         <option value="tsu">TSU</option>
                                         <option value="lincenciatura">Lincenciatura</option>
-                                        <option value="ingenieria">Ingenieria</option>
+                                        <option value="ingenieria">Ingeniería</option>
                                     </select>
                                 </div>
                                 <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
@@ -93,13 +93,13 @@
                                         <option value="" selected>(Opcional)</option>
                                         <option value="1">Canto</option>
                                         <option value="2">Baile</option>
-                                        <option value="3">Actuacion</option>
-                                        <option value="4">Artes Plasticas</option>
+                                        <option value="3">Actuación</option>
+                                        <option value="4">Artes Plásticas</option>
                                     </select>
                                 </div>
                                 <hr>
                                 <div class="text-center">
-                                    <i>Datos para el inicio de sesion</i>
+                                    <i>Datos para el inicio de sesión</i>
                                 </div>
                                 <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
                                     <label for="usuario" class="form-label">Usuario:</label>
@@ -155,7 +155,7 @@
                             <!-- mb-3  margin-bottom de 3 unidades -->
                             <form action="" id='modal_form_mod_usu_log'>
                                 <div class="mb-1" id="cont_ci_usu_edi" name="cont_ci_usu_edi" style="display: none;">
-                                    <label for="cedula_usu">Cedula:</label>
+                                    <label for="cedula_usu">Cédula:</label>
                                     <div class="d-flex flex-row">
                                         <input class="form-control" type="number" id="cedula" name="cedula">
                                     </div>
@@ -294,7 +294,7 @@
                                 <input type="text" name="correo_edi" id="correo_edi" class="form-control" value="@gmail.com">
                             </div>
                             <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
-                                <label for="telefono_edi" class="form-label">Telefono: </label>
+                                <label for="telefono_edi" class="form-label">Teléfono: </label>
                                 <input type="number" name="telefono_edi" id="telefono_edi" class="form-control">
                             </div>
                             <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
@@ -364,12 +364,38 @@
                         <!-- mb-3  margin-bottom de 3 unidades -->
                         <form action="">
                             <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
-                                <label for="pregunta" class="form-label">Ingresa tu usuario:</label>
+                                <label for="pregunta" class="form-label">Ingresa su usuario:</label>
                                 <input type="text" name="usu_rec_con" id="usu_rec_con" class="form-control">
                             </div>
                             <div class="modal-footer justify-content-center">
                                 <button type="button" class="btn btn-success"  id="rec_pre_sec" name="rec_pre_sec" >Pregunta secreta</button>
                                 <button type="button" class="btn btn-success"  id="rec_env_cor" name="rec_env_cor" >Envio de correo</button>
+                            </div>
+                            <div class="mb-2" id="error_soli_exp8"></div>
+                        </form>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+        <!-- modal 20 ingresar nueva contraseña -->
+        <div class="modal fade" id="exampleModal20" tabindex="-1" aria-labelledby="titulo1" aria-hidden="true">
+            <div class="modal-dialog modal1" id="mod1">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="titulo1">Solicitar expediente</h5> -->
+                    <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
+                </div>
+                <div class="modal-body">
+                        <h2 class="text-center" id='id_tit_mod1'>Ingrese su nueva contraseña</h2>
+                        <!-- mb-3  margin-bottom de 3 unidades -->
+                        <form action="">
+                            <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
+                                <label for="nv_contra" class="form-label">Nueva contraseña:</label>
+                                <input type="text" name="nv_contra" id="nv_contra" class="form-control" maxlength="15">
+                            </div>
+                            <div class="modal-footer justify-content-center">
+                                <button type="button" class="btn btn-success"  id="guardar_con_pre" name="guardar_con_pre" >Guardar contraseña</button>
                             </div>
                             <div class="mb-2" id="error_soli_exp8"></div>
                         </form>
@@ -398,6 +424,7 @@
                                 <label for="respuesta_edi" class="form-label">Respuesta secreta:</label>
                                 <input type="text" name="respuesta_sec_rec" id="respuesta_sec_rec" class="form-control">
                                 <input type="hidden" name="respuesta_veri" id="respuesta_veri" class="form-control">
+                                <input type="hidden" name="usuario_id_pre" id="usuario_id_pre">
                             </div>
                             <div class="modal-footer justify-content-center">
                                 <button type="button" class="btn btn-success"  id="rec_env_cor" name="rec_env_cor" onclick="recuperar_contra_respu()">Recuperar contraseña</button>
@@ -477,7 +504,7 @@
                     <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
                 </div>
                 <div class="modal-body">
-                    <h1 class="titulo_mod_exp">Grafico por Tipo</h1>
+                    <h1 class="titulo_mod_exp">Gráfico por Tipo</h1>
                     <div class="principal">
                         <canvas id="myChart" width="300" height="150"></canvas>
                     </div>
@@ -493,7 +520,7 @@
                     <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
                 </div>
                 <div class="modal-body">
-                    <h1 class="titulo_mod_exp">Grafico por Estados</h1>
+                    <h1 class="titulo_mod_exp">Gráfico por Estados</h1>
                     <div class="principal">
                         <div id="cargando1" name="cargando1" class="text-center"></div>
                         <!-- <p id="cargando1" class="text-center"></p> -->
@@ -511,7 +538,7 @@
                     <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
                 </div>
                 <div class="modal-body">
-                    <h1 class="titulo_mod_exp">Grafico por Estados</h1>
+                    <h1 class="titulo_mod_exp">Gráfico por Estados</h1>
                     <div class="principal">
                         <div id="cargando1" name="cargando4" class="text-center"></div>
                         <!-- <p id="cargando1" class="text-center"></p> -->
@@ -543,7 +570,7 @@
                     <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
                 </div>
                 <div class="modal-body">
-                    <h1 class="titulo_mod_exp">Grafico por sexo general</h1>
+                    <h1 class="titulo_mod_exp">Gráfico por sexo general</h1>
                     <div class="principal">
                         <div id="cargando2" name="cargando2" class="text-center"></div>
                         <!-- <p id="cargando1" class="text-center"></p> -->
@@ -596,7 +623,7 @@
                     <button type="button" class="btn-close bg-success btn_cerrar_mod1" data-bs-dismiss="modal" aria-label="Close">x</button>
                 </div>
                 <div class="modal-body">
-                    <h1 class="titulo_mod_exp">Grafico de Programas Ambientales por Parroquia</h1>
+                    <h1 class="titulo_mod_exp">Gráfico de Programas Ambientales por Parroquia</h1>
                     <div class="principal">
                         <canvas id="myChart6" width="300" height="150"></canvas>
                         <div class="mb-1" id="" style="display: flex; justify-content: space-evenly;">
@@ -617,8 +644,8 @@
                                     </select>
                         </div>
                         <div class="modal-footer justify-content-center">
-                            <button type="button" class="btn btn-success"  id="ver_grafico_p" name="ver_grafico_p" onclick="" disabled="true">Ver Grafico</button>
-                            </div>
+                            <button type="button" class="btn btn-success"  id="ver_grafico_p" name="ver_grafico_p" onclick="" disabled="true">Ver Gráfico</button>
+                        </div>
                         <div id="cargando2" name="cargando2" class="text-center"></div>
                         <!-- <i id="cargando5" class="text-center">Cargando...</i> -->
                     </div>
